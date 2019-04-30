@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+
+{% load staticfiles %} <!-- new -->
+
+<html>
+
+    <head>
+        <title>Rango</title>
+
+    </head>
+
+    <body>
+        <h1>Rango Says</h1>
+
+        <div>
+            hey there partner<br/>
+            <strong>{{ boldmessage }}</strong>
+
+        </div>
+
+            <a href="/rango/about">About</a><br/>
+            <img src="{% static "images/sjt.jpg" %}"
+            alt="Picture of SJT" />
+
+        </div>
+    </body>
+
+
+</html>
