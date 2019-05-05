@@ -54,13 +54,16 @@ def populate():
             print("{0}---{1}---".format(str(c),str(p)))
 
 
-
+    '''#delete all
+    Category.objects.all().delete()
+    Page.objects.all().delete()
+    '''
 
 def add_page(cat,title,url,views=0):
     p = Page.objects.get_or_create(category=cat , title =title )
     # (object , true/false) [0]-->得到返回的object ,[1]-->不存在还是已经存在
 
-    if  p[1]== False :
+    if  p[1]== False :# page exists
             return
 
     p = p[0]
@@ -77,6 +80,7 @@ def add_cat(name , views=0 , likes =0):
 
     c = Category.objects.get_or_create(name = name)
 
+    #category exists
     if c[1] == False:
         return
 
@@ -94,6 +98,7 @@ if __name__ == '__main__':
     print('\nStart Rango Population Script...')
 
     populate()
+
 
 
 

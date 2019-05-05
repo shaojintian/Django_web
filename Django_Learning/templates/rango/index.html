@@ -18,12 +18,33 @@
             <strong>{{ boldmessage }}</strong>
 
         </div>
+        <!-- categories-->
+        <div>
+            {% if categories %}
+            <ul>
+                {% for cat in categories%}
+                    <li>{{ cat.name }}</li>
 
-            <a href="/rango/about">About</a><br/>
+                {% endfor %}
+            </ul>
+            {%else %}
+
+            <strong>No sucn categories!</strong>
+
+            {% endif %}
+        </div>
+
+
+
+
+        <div>
             <img src="{% static "images/sjt.jpg" %}"
-            alt="Picture of SJT" />
+            alt="Picture of SJT" /><br/>
+            <a href="/rango/about">About</a><br/>
 
         </div>
+
+
     </body>
 
 
